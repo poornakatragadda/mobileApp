@@ -1,2 +1,1 @@
-# mobileApp
-# TESTING MOBILE APP
+# customerportal-mobile-app
