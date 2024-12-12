@@ -153,6 +153,7 @@ export async function fetchPoliciesFromBackend(userId) {
 
       // Coverage: use lobType as a coverage summary placeholder
       const coverage = policy.lobType || "N/A";
+      const coverages = policy.terms?.[0]?.coverages || {};;
 
       // Return a simplified policy object
       return {
@@ -165,6 +166,7 @@ export async function fetchPoliciesFromBackend(userId) {
         agencyName,
         agencyAddress,
         coverage,
+        coverages,
         // Include the entire raw policy if needed:
         rawPolicy: policy,
       };

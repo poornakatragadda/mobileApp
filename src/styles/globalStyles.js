@@ -85,10 +85,4 @@ export const globalStyles = StyleSheet.create({
     fontFamily: "Roboto-Regular",
     fontSize: 16,
   },
-  sectionTitle: {
-    color: "#004170",
-    fontFamily: "Roboto-Regular",
-    fontSize: 20,
-    marginBottom: 10,
-  },
 });
