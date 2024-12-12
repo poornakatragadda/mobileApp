@@ -17,14 +17,14 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
   },
   h2: {
-    fontFamily: "Roboto-Regular",
+    fontFamily: "Roboto-Bold",
     fontSize: 22,
     lineHeight: 31,
     color: "#004170",
     backgroundColor: "#FFFFFF",
   },
   h3: {
-    fontFamily: "Roboto-Regular",
+    fontFamily: "Roboto-Medium",
     fontSize: 17,
     lineHeight: 24,
     color: "#004170",
@@ -84,5 +84,11 @@ export const globalStyles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: "Roboto-Regular",
     fontSize: 16,
+  },
+  // New Styles for PolicyDetailsScreen
+  sectionTitle: {
+    color: "#004170",
+    fontFamily: "Roboto-Medium",
+    fontSize: 20,
   },
 });

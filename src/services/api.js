@@ -131,8 +131,8 @@ export async function fetchPoliciesFromBackend(userId) {
       const address = policy.address?.formattedAddress || "";
       const status = policy.terms?.[0]?.statusDisplay || "N/A";
       const annualPremium =
-        policy.terms?.[0]?.billing?.totalPremium !== undefined
-          ? `$${policy.terms[0].billing.totalPremium}`
+        policy.billing?.currentTermPremiumBalance !== undefined
+          ? `$${policy.billing.currentTermPremiumBalance.toLocaleString()}`
           : "N/A";
 
       const effectiveDate = policy.terms?.[0]?.effectiveDate || "";
@@ -153,7 +153,7 @@ export async function fetchPoliciesFromBackend(userId) {
 
       // Coverage: use lobType as a coverage summary placeholder
       const coverage = policy.lobType || "N/A";
-      const coverages = policy.terms?.[0]?.coverages || {};;
+      const coverages = policy.terms?.[0]?.coverages || {};
 
       // Return a simplified policy object
       return {
